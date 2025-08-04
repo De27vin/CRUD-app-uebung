@@ -5,6 +5,28 @@
     <title>Document</title>
 </head>
 <body>
+
+    @auth
+    <h1>Homepage</h1>
+    <form action="/logout" method="POST">
+        @csrf
+        <button>Log out</button>
+    </form>
+    @else
+    <div style="border: 3px solid black;">
+        <div style="margin: 10px;">
+            <h1>Anmelden</h1>
+            <form action="/login" method="POST">
+                @csrf
+                <input name="loginemail" type="text" placeholder="Email">
+                <input name="loginpassword" type="password" placeholder="Passwort">
+                <br>
+                <button style="margin-top: 10px">Anmelden</button>
+            </form>
+
+        </div>
+    </div>
+
     <div style="border: 3px solid black;">
         <div style="margin: 10px;">
             <h1>Registrierung</h1>
@@ -15,8 +37,13 @@
                 <br>
                 <button style="margin-top: 10px">Registrieren</button>
             </form>
-            
         </div>
     </div>
+
+
+    @endauth
+
+
+
 </body>
 </html>
