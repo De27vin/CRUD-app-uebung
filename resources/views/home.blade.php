@@ -12,6 +12,17 @@
         @csrf
         <button>Log out</button>
     </form>
+
+    <div style="border: 3px solid black;">
+        <h1>Neuen Post erstellen</h1>
+        <form action="/create-post" method="POST">
+            @csrf
+            <input type="text" name="title" placeholder="Titel">
+            <textarea name="body" placeholder="Inhalt"></textarea>
+            <button>Post speichern!</button>
+        </form>
+    </div>
+
     @else
     <div style="border: 3px solid black;">
         <div style="margin: 10px;">
