@@ -23,6 +23,16 @@
         </form>
     </div>
 
+    <div style="border: 3px solid black;">
+        <h1>Posts</h1>
+        @foreach($posts as $post)
+        <div style="background-color: gray">
+            <h3>{{$post['title']}}</h3>
+        {{$post['body']}}
+        </div>
+        @endforeach
+    </div>
+
     @else
     <div style="border: 3px solid black;">
         <div style="margin: 10px;">
