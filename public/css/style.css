@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Anton', sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h3 {
+    color: red;
+    text-transform: uppercase;
+}
+
+a {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+input, textarea {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+    font-family: inherit;
+    background: #111;
+    border: 2px solid red;
+    color: white;
+}
+
+button {
+    background-color: red;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: inherit;
+    box-shadow: 0 0 5px red, 0 0 10px red, 0 0 15px red;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: darkred;
+    box-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red;
+    transform: scale(1.05);
+}
+
+.box {
+    border: 3px solid red;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #111;
+}
+
+.post {
+    background-color: #222;
+    padding: 15px;
+    margin-bottom: 20px;
+}
