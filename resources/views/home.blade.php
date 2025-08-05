@@ -28,7 +28,15 @@
         @foreach($posts as $post)
         <div style="background-color: gray">
             <h3>{{$post['title']}}</h3>
-        {{$post['body']}}
+            {{$post['body']}}
+
+            <p><a href="/edit-post/{{$post->id}}">Bearbeiten</a></p>
+
+            <form action="/delete-post/{{$post->id}}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button>Löschen</button>
+            </form>
         </div>
         @endforeach
     </div>
